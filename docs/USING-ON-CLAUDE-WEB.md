@@ -21,11 +21,15 @@ A common pattern: do `research → prd → roadmap → ui` on the web (fast, no 
 
 ## Uploading a skill
 
-1. Package the skills you want as zip files:
+**Easiest path — use the pre-packaged zips:** [mvp-os-skills](https://github.com/peter-tnc-453/mvp-os-skills) ships a ready-to-upload `.zip` for every skill in this repo. Download the one you want and skip straight to step 2 below — no packaging step needed.
+
+**Or package them yourself from this repo:**
+
+1. Zip the skills you want:
    ```bash
    scripts/package-skills.sh
    ```
-   This zips each skill folder individually into `dist/skills-zip/<name>.zip` — each zip needs the skill's own folder at its root, which is why they're packaged one at a time rather than all together.
+   This zips each skill folder individually into `dist/skills-zip/<name>.zip` — each zip needs the skill's own folder at its root, which is why they're packaged one at a time rather than all together. (Zipping the whole `.claude/skills/` folder in one go — e.g. via Finder's "Compress" on multiple selected folders — produces a zip with every skill's `SKILL.md` inside, and claude.ai's uploader rejects that: it requires *exactly one* `SKILL.md` per zip.)
 2. Go to **claude.ai → Settings → Customize → Skills → Upload**.
 3. Upload the zip(s) you want — start with `research.zip`, `prd.zip`, `roadmap.zip`, and `ui.zip` if you only want the planning half.
 4. Claude reads the `SKILL.md` inside automatically and shows the skill's name, description, and license in the Skills list.
