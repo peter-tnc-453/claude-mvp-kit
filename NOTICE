@@ -1,0 +1,23 @@
+Claude MVP Kit
+Copyright (c) 2026 Thanachot Wongkoed (Peter)
+
+This project includes material adapted from third-party open-source works:
+
+1. PM-Skills (https://github.com/product-on-purpose/pm-skills)
+   License: Apache License 2.0 — see LICENSE-pm-skills
+   Used in: .claude/skills/persona/, .claude/skills/competitor/,
+   .claude/skills/lean-canvas/, .claude/skills/prd/, .claude/skills/user-story/,
+   and as composed references inside .claude/skills/research/ and .claude/skills/roadmap/.
+   Skill frontmatter `name:` fields were renamed to match this kit's course
+   terminology; substantive instructions are unmodified from the source.
+
+2. prompt-architect (https://github.com/ckelsoe/prompt-architect)
+   License: MIT
+   Used in: framework/prompt-frameworks.md (a narrowed subset of the
+   27-framework set, adapted for MVP-building prompts).
+
+3. "The Work of Product Management" framework diagram — Todd Birzer.
+   Used with attribution in: framework/product-management.md.
+
+All other content in this repository is original, written for this kit,
+and licensed under the MIT License (see LICENSE).
