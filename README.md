@@ -1,5 +1,7 @@
 # Claude MVP Kit
 
+![Claude MVP Kit](assets/banner.png)
+
 **An AI Product Operating System for building MVPs with Claude Code.**
 
 This isn't a coding course in a box — it's a repository that bundles a product management framework, a prompt library, and a full code-generation workflow into one place. Fork it, state your idea, and go.
