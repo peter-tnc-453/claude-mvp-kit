@@ -55,6 +55,8 @@ Use this repository. Follow the full workflow (research → prd → roadmap → 
 
 More ready-made prompts: `prompts/prompt-library.md`. A fully worked example: `examples/booking-system/`.
 
+**Don't have Claude Code set up yet?** The planning skills (`research`, `persona`, `competitor`, `lean-canvas`, `prd`, `roadmap`, `ui`) also work directly on [claude.ai](https://claude.ai) — see `docs/USING-ON-CLAUDE-WEB.md` for how to upload them there.
+
 ## Update / Fork / Contribute
 
 - **Fork and build:** hit Fork on GitHub, clone your copy, edit or add skills freely — nothing here affects the original.
