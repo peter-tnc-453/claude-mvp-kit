@@ -19,30 +19,25 @@ The pipeline splits cleanly at the point where work stops being "write a documen
 
 A common pattern: do `research → prd → roadmap → ui` on the web (fast, no terminal needed, good for planning on a phone or between meetings), then hand the resulting documents to Claude Code to build and deploy.
 
-## Uploading a skill
+## Uploading the skill
 
-**Easiest path — use the pre-packaged zips:** [mvp-os-skills](https://github.com/peter-tnc-453/mvp-os-skills) ships a ready-to-upload `.zip` for every skill in this repo. Download the one you want and skip straight to step 2 below — no packaging step needed.
+**One upload, not fourteen.** [mvp-os-skills](https://github.com/peter-tnc-453/mvp-os-skills) packages the whole pipeline as a single `mvp-os.zip` — a routing `SKILL.md` at the root, plus one reference file per stage that Claude opens only when that stage is actually relevant. claude.ai requires exactly one `SKILL.md` per uploaded zip (uploading a zip of the whole `.claude/skills/` folder — e.g. via Finder's "Compress" on multiple selected folders — fails, since that has thirteen), which is exactly the problem this packaging avoids.
 
-**Or package them yourself from this repo:**
-
-1. Zip the skills you want:
-   ```bash
-   scripts/package-skills.sh
-   ```
-   This zips each skill folder individually into `dist/skills-zip/<name>.zip` — each zip needs the skill's own folder at its root, which is why they're packaged one at a time rather than all together. (Zipping the whole `.claude/skills/` folder in one go — e.g. via Finder's "Compress" on multiple selected folders — produces a zip with every skill's `SKILL.md` inside, and claude.ai's uploader rejects that: it requires *exactly one* `SKILL.md` per zip.)
+1. Download `mvp-os.zip` from [mvp-os-skills](https://github.com/peter-tnc-453/mvp-os-skills).
 2. Go to **claude.ai → Settings → Customize → Skills → Upload**.
-3. Upload the zip(s) you want — start with `research.zip`, `prd.zip`, `roadmap.zip`, and `ui.zip` if you only want the planning half.
-4. Claude reads the `SKILL.md` inside automatically and shows the skill's name, description, and license in the Skills list.
+3. Upload `mvp-os.zip`. Claude reads its `SKILL.md` automatically and shows the skill's name, description, and license.
 
-## Using an uploaded skill
+If you'd rather install only one or two stages instead of the whole pipeline, `mvp-os-skills` also keeps the old one-zip-per-stage packaging under `advanced-individual-skills/` — most people won't need it.
 
-Once uploaded, a skill activates itself — Claude decides to use it based on the `description` field in its frontmatter, the same way it does in Claude Code. You don't need slash-command syntax in the web app; just describe what you want:
+## Using the skill
+
+Once uploaded, it activates itself — Claude decides to use it based on the `description` field in its frontmatter, the same way it does in Claude Code. You don't need slash-command syntax in the web app; just describe what you want:
 
 ```
 I have an idea: [your MVP idea in one sentence]. Help me write a research brief for it.
 ```
 
-Claude will recognize this matches the `research` skill's description and use it. If it doesn't pick the skill up on its own, name it directly: "Use the research skill on this idea."
+Claude will recognize this matches the skill's `research` stage and open that reference file. If it doesn't pick the skill up on its own, name it directly: "Use the MVP OS skill on this idea."
 
 ## Reference
 
