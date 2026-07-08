@@ -1,31 +1,33 @@
 # Claude MVP Kit
 
-**An AI Product Operating System สำหรับสร้าง MVP ด้วย Claude Code** — ไม่ใช่คอร์สสอนเขียนโค้ด แต่เป็น repository ที่ประกอบ Product Management framework, prompt library, และ code-generation workflow ไว้ในที่เดียว fork แล้วสั่งงานได้ทันที
+**An AI Product Operating System for building MVPs with Claude Code.**
 
-## สิ่งที่อยู่ในนี้
+This isn't a coding course in a box — it's a repository that bundles a product management framework, a prompt library, and a full code-generation workflow into one place. Fork it, state your idea, and go.
 
-- **Claude Skills 14 ตัว** ครอบคลุมทั้งไปป์ไลน์ ตั้งแต่ research จนถึง deploy
-- **Product Management framework** — Todd Birzer's 4-pillar map ที่กำหนดว่าทำไมไปป์ไลน์ถึงเรียงลำดับแบบนี้
-- **Prompt library** — prompt สำเร็จรูปสำหรับแต่ละขั้นตอน คัดลอกไปใช้ได้เลย
-- **UI/PRD/Research generator** — ผ่านสกิลที่ปรับมาจาก [product-on-purpose/pm-skills](https://github.com/product-on-purpose/pm-skills) (Apache 2.0)
-- **ตัวอย่างโปรเจกต์ 3 ชิ้น** — 1 ชิ้นทำครบ (Booking System) + 2 ชิ้นเป็น starting prompt (CRM, AI Chat Dashboard)
-- **Deploy script** — ไปที่ Vercel (static) หรือ Railway (มี backend) คำสั่งเดียว
+## What's in here
 
-กลับบ้านแล้วสามารถสร้าง MVP เองได้ทันที
+- **14 Claude Skills** covering the full pipeline, from research to deploy
+- **A product management framework** — Todd Birzer's 4-pillar map, which is *why* the pipeline is ordered the way it is, not an arbitrary checklist
+- **A prompt library** — ready-to-use prompts per stage, copy and adapt
+- **Research / PRD / UI generation** — skills adapted from [product-on-purpose/pm-skills](https://github.com/product-on-purpose/pm-skills) (Apache-2.0)
+- **Three example projects** — one fully worked (Booking System), two as starting prompts (CRM, AI Chat Dashboard)
+- **A deploy script** — one command to Vercel (static) or Railway (has a backend)
+
+Clone it, and you can build your own MVP the same day.
 
 ## Repository Tour
 
 ```
 claude-mvp-kit/
 ├── .claude/
-│   └── skills/          14 skill: research, persona, competitor, lean-canvas,
+│   └── skills/          14 skills: research, persona, competitor, lean-canvas,
 │                         prd, roadmap, user-story, ui, build, frontend,
 │                         backend, database, debug, deploy
-├── framework/            ทำไมไปป์ไลน์เรียงแบบนี้ (PM framework + prompt frameworks)
-├── prompts/               prompt สำเร็จรูปต่อขั้นตอน — copy ไปใช้ได้เลย
-├── template/              ทางลัดไปยัง template ของแต่ละ artifact
-├── examples/              3 ตัวอย่างโปรเจกต์ (1 ทำครบ + 2 stub)
-└── CLAUDE.md              บอก Claude Code ว่าต้องทำงานตาม workflow นี้เสมอ
+├── framework/            why the pipeline is ordered this way (PM framework + prompt frameworks)
+├── prompts/               ready-to-use prompts per stage — copy and go
+├── template/              shortcuts to each artifact's template
+├── examples/              3 example projects (1 fully worked + 2 starter prompts)
+└── CLAUDE.md              tells Claude Code to follow this workflow, every time
 ```
 
 ## The Pipeline
@@ -34,7 +36,7 @@ claude-mvp-kit/
 Idea → /research → /prd → /roadmap → /ui → /build (→ /frontend /backend /database) → /debug → /deploy
 ```
 
-รายละเอียดเต็มของแต่ละขั้น + เหตุผลว่าทำไมต้องเรียงแบบนี้ → `framework/workflow.md`
+Full rationale for the order → `framework/workflow.md`.
 
 ## Quickstart
 
@@ -44,24 +46,24 @@ cd my-mvp
 claude
 ```
 
-จากนั้นพิมพ์ในเซสชัน Claude Code:
+Then, in the Claude Code session:
 
 ```
-สร้าง MVP: [ไอเดียของคุณในหนึ่งประโยค]
-ใช้ repository นี้ ทำตาม workflow เต็ม (research → prd → roadmap → ui → build → debug → deploy)
+Build an MVP: [your idea in one sentence]
+Use this repository. Follow the full workflow (research → prd → roadmap → ui → build → debug → deploy).
 ```
 
-ดู prompt สำเร็จรูปเพิ่มเติมที่ `prompts/prompt-library.md` หรือดูตัวอย่างที่ทำเสร็จแล้วที่ `examples/booking-system/`
+More ready-made prompts: `prompts/prompt-library.md`. A fully worked example: `examples/booking-system/`.
 
-## Update / Fork / Pull
+## Update / Fork / Contribute
 
-- **Fork แล้วใช้ต่อ:** กด Fork บน GitHub แล้ว clone repo ของตัวเอง — แก้/เพิ่ม skill ได้อิสระ ไม่กระทบต้นฉบับ
-- **ดึงอัปเดตจากต้นฉบับ:** `git remote add upstream <original-repo-url>` แล้ว `git fetch upstream && git merge upstream/main`
-- **ส่งของกลับ:** เปิด Pull Request บนต้นฉบับ ถ้ามี skill/ตัวอย่างที่คิดว่าคนอื่นควรได้ใช้ด้วย
+- **Fork and build:** hit Fork on GitHub, clone your copy, edit or add skills freely — nothing here affects the original.
+- **Pull upstream updates:** `git remote add upstream <original-repo-url>` then `git fetch upstream && git merge upstream/main`.
+- **Contribute back:** open a Pull Request on the original if you've built a skill or example worth sharing.
 
 ## License & Attribution
 
-- Kit นี้: MIT (ยกเว้นไฟล์ที่ระบุ `license: Apache-2.0` ในตัวเอง)
-- Skill `persona`, `competitor`, `lean-canvas`, `prd`, `user-story` และ reference ที่ `research`/`roadmap` ใช้: ดัดแปลงจาก [product-on-purpose/pm-skills](https://github.com/product-on-purpose/pm-skills), Apache License 2.0 — ดู `NOTICE` และ `LICENSE-pm-skills`
-- Prompt framework cheat sheet: ดัดแปลงจาก [ckelsoe/prompt-architect](https://github.com/ckelsoe/prompt-architect), MIT
-- PM framework diagram: Todd Birzer, "The Work of Product Management"
+- This kit: MIT (except files whose own frontmatter states `license: Apache-2.0`).
+- Skills `persona`, `competitor`, `lean-canvas`, `prd`, `user-story`, and the references used by `research`/`roadmap`: adapted from [product-on-purpose/pm-skills](https://github.com/product-on-purpose/pm-skills), Apache License 2.0 — see `NOTICE` and `LICENSE-pm-skills`.
+- Prompt framework cheat sheet: adapted from [ckelsoe/prompt-architect](https://github.com/ckelsoe/prompt-architect), MIT.
+- PM framework diagram: Todd Birzer, "The Work of Product Management."

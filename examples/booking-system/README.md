@@ -1,6 +1,6 @@
 # Example: Meeting Room Booking
 
-This folder is the finished output of `/research → /prd → /roadmap → /ui` for one idea, so you can see the shape of a real pipeline run before you do your own. It stops at the UI spec — the actual code is meant to be generated live with `/build`, not shipped pre-written, so you see the code-generation step happen rather than just reading a finished repo.
+This folder is the finished output of `/research → /prd → /roadmap → /ui` for one idea, so you can see the shape of a real pipeline run before doing your own. It stops at the UI spec — the actual code is meant to be generated live with `/build`, not shipped pre-written, so you see the code-generation step happen rather than just reading a finished repo.
 
 ## Files, in the order they were produced
 
@@ -14,7 +14,8 @@ This folder is the finished output of `/research → /prd → /roadmap → /ui` 
 ## Try it yourself
 
 ```
-เอาไฟล์ทั้ง 6 ในโฟลเดอร์นี้ ทำต่อด้วย /build จนได้ MVP ที่รันได้จริงบน localhost
+Take the six files in this folder and continue with /build until you have a
+working MVP running on localhost.
 ```
 
 Or fork the whole repo and run the pipeline on your own idea from scratch — start at `/research`, not here.

@@ -5,55 +5,55 @@ One ready-to-use prompt per pipeline stage. Swap the bracketed parts for your id
 ## 1. Research
 
 ```
-สร้าง MVP: [หนึ่งประโยคบอกไอเดีย เช่น "ระบบจองห้องประชุมสำหรับออฟฟิศขนาดเล็ก"]
+Build an MVP: [your idea in one sentence, e.g. "a meeting-room booking system for small offices"]
 
-ใช้ repository นี้ ทำตาม /research ก่อน — เขียน problem statement, JTBD canvas,
-และ market sanity check ให้ครบ แล้วหยุดรอผมยืนยันก่อนไปขั้นต่อไป
+Use this repository. Run /research first — write a full problem statement, JTBD canvas,
+and market sanity check, then stop and wait for me to confirm before moving on.
 ```
 
 ## 2. PRD (after confirming the research brief)
 
 ```
-เอา research brief ด้านบนไปทำ /prd — โฟกัส feature ที่ทำให้จบใน [เวลาที่มี] เท่านั้น
-ห้ามใส่ feature ที่ research brief ไม่ได้ชี้ว่าจำเป็น
+Take the research brief above and run /prd — scope it to what can realistically ship
+in [time available]. Don't include any feature the research brief doesn't point to.
 ```
 
 ## 3. Roadmap
 
 ```
-ทำ /roadmap จาก PRD นี้ — จัด Now/Next/Later ด้วย RICE และเขียน OKR ของ MVP milestone
-Now ต้องทำเสร็จได้จริงใน [เวลาที่มี]
+Run /roadmap on this PRD — prioritize with RICE into Now/Next/Later, and write the
+MVP milestone OKR. "Now" has to be achievable within [time available].
 ```
 
 ## 4. UI
 
 ```
-ทำ /ui จาก roadmap ส่วน Now — list หน้าจอทั้งหมด, primary action ต่อหน้า,
-และ 4 states (empty/loading/error/success) ของแต่ละหน้า ยังไม่ต้องเขียนโค้ด
+Run /ui on the "Now" scope from the roadmap — list every screen, its primary action,
+and its four states (empty/loading/error/success) for each. No code yet.
 ```
 
-## 5. Build (research → deploy in one go, for a live demo)
+## 5. Build (research → deploy in one pass, for a live demo)
 
 ```
-สร้าง [ไอเดีย] ใช้ repository นี้ ทำตาม workflow ทั้งหมด (research → prd → roadmap →
-ui → build → debug → deploy) จนได้ MVP ที่รันได้จริงบน localhost แล้วบอกผมทุกขั้นตอน
-ที่ verify ผ่าน ก่อนไปขั้นต่อไป
+Build [your idea] using this repository. Follow the full workflow (research → prd →
+roadmap → ui → build → debug → deploy) until it's a real MVP running on localhost.
+Tell me what you verified at each step before moving to the next.
 ```
 
 ## 6. Debug (when something breaks)
 
 ```
-[error message เต็มๆ วางตรงนี้]
+[paste the full error message here]
 
-ใช้ /debug — reproduce ก่อน, isolate ว่า bug อยู่ database/backend/frontend ชั้นไหน,
-แล้วค่อยเสนอ fix พร้อมบอกว่า verify ยังไง
+Use /debug — reproduce it first, isolate whether the bug is in the database,
+backend, or frontend layer, then propose a fix and how you'll verify it.
 ```
 
 ## 7. Deploy
 
 ```
-build นี้ verify แล้วว่าใช้ได้จริงบน local — ใช้ /deploy พาไปขึ้น [vercel|railway]
-แล้วเปิดลิงก์จริงให้ผมดูว่า primary action ใช้งานได้
+This build is verified working locally. Use /deploy to ship it to [vercel|railway],
+then open the live URL and confirm the primary action actually works.
 ```
 
 ## Composing your own
